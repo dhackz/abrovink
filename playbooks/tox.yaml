@@ -3,10 +3,10 @@
     - name: Install Python 3 pip
       package:
         name:
-          - python-pip
-          - python-setuptools
-          - python-venv
-        become: yes
+          - python3-pip
+          - python3-setuptools
+          - python3-venv
+      become: yes
     - name: Install tox
       pip:
         name: tox
