@@ -1,0 +1,6 @@
+- project:
+    check:
+      jobs: &id001
+        - tox-linters
+    gate:
+      jobs: *id001

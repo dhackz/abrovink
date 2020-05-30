@@ -1,0 +1,25 @@
+canonical_name: opendev.org/zuul/zuul-jobs
+
+zuul-paths:
+  - zuul.d
+  - zuul-tests.d
+
+controller:
+  build-context: controller
+
+labels:
+  debian-stretch:
+    build-context: debian-stretch
+  fedora-31:
+    build-context: fedora-31
+  fedora-32:
+    build-context: fedora-32
+  ubuntu-bionic:
+    build-context: ubuntu-bionic
+  ubuntu-xenial:
+    build-context: ubuntu-xenial
+
+default-nodeset:
+  nodes:
+    - name: ubuntu-bionic
+      label: ubuntu-bionic
