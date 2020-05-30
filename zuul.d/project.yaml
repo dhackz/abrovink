@@ -1,7 +1,7 @@
 - job:
     name: abrovink-tox-linters
     parent: tox-linters
-    pre-run: playbooks/ensure-pip.yaml
+    run: playbooks/tox.yaml
 
 - project:
     check:

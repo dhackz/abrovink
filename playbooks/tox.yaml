@@ -1,0 +1,16 @@
+- hosts: all
+  tasks:
+    - name: Install Python 3 pip
+      package:
+        name:
+          - python-pip
+          - python-setuptools
+          - python-venv
+        become: yes
+    - name: Install tox
+      pip:
+        name: tox
+    - name: Run tox
+      command: ~/.local/bin/tox
+      args:
+        chdir: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
