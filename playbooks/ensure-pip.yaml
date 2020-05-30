@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: Install Python 3 pip
+      package:
+        name:
+          - python-pip
+          - python-setuptools
+          - python-venv
+        become: yes

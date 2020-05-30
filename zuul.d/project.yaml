@@ -1,6 +1,11 @@
+- job:
+    name: abrovink-tox-linters
+    parent: tox-linters
+    pre-run: playbooks/ensure-pip.yaml
+
 - project:
     check:
       jobs: &id001
-        - tox-linters
+        - abrovink-tox-linters
     gate:
       jobs: *id001
