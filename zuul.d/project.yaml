@@ -1,10 +1,6 @@
-- job:
-    name: abrovink-tox-linters
-    run: playbooks/tox.yaml
-
 - project:
     check:
       jobs: &id001
-        - abrovink-tox-linters
+        - tox-linters
     gate:
       jobs: *id001
